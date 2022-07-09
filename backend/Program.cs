@@ -17,7 +17,8 @@ var connectionString = Environment.GetEnvironmentVariable("ConnectionString")
 builder.Services.AddPooledDbContextFactory<DataContext>(
     onions => onions.UseNpgsql(connectionString));
 
-builder.Services.AddTransient<UserService>();
+builder.Services.AddSingleton<UserService>();
+builder.Services.AddScoped<backend.GraphQL.QueryData>();
 
 builder.Services
     .AddGraphQLServer()
