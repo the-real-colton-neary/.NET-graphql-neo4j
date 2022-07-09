@@ -1,0 +1,20 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  colddong-db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: colddong
+      POSTGRES_USER: colddong
+      POSTGRES_PASSWORD: ldqDXoXyfjfM3W14iCSPRSEX7RmfS6MsZ4
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
