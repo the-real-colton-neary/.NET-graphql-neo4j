@@ -1,2 +1,5 @@
 backend/bin/*
 /backend/bin
+backend/bin/net6.0/
+
+backend/obj/
