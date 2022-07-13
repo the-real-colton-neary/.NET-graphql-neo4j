@@ -1,0 +1,11 @@
+{
+    "schema": "TypeDefinitions.graphql",
+    "documents":"**.*.graphql",
+    "extensions": {
+        "neo4j": {
+            "name": "Library",
+            "databaseName": "neo4j",
+            "namespace": "backend"
+        }
+    }
+}
