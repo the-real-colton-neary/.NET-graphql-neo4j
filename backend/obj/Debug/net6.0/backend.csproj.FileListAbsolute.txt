@@ -52,3 +52,9 @@ C:\Users\schne\Repo\coltonneary\backend\obj\Debug\net6.0\backend.genruntimeconfi
 C:\Users\schne\Repo\coltonneary\backend\obj\Debug\net6.0\ref\backend.dll
 C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\HotChocolate.Data.dll
 C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\HotChocolate.Data.EntityFramework.dll
+C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\HotChocolate.Data.Neo4J.dll
+C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\Neo4j.Driver.dll
+C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\Neo4j.Driver.Simple.dll
+C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\ServiceStack.Text.dll
+C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\System.Linq.Async.dll
+C:\Users\schne\Repo\coltonneary\backend\bin\Debug\net6.0\GraphQL\.graphqlrc.json
