@@ -1,29 +1,23 @@
+
 using backend.Entities;
-using backend.Services;
+using HotChocolate.Data.Neo4J;
+using HotChocolate.Data.Neo4J.Execution;
+using Neo4j.Driver;
 
-namespace backend.GraphQL
+namespace backend.GraphQL;
+public class QueryData
 {
-    public class QueryData
-    {
-        private UserService _users;
 
-        public QueryData(UserService UserService)
-        {
-            _users = UserService;
-        }
+    [GraphQLName("authors")]
+    [UseNeo4JDatabase("neo4j")]
+    [UseProjection]
+    [UseSorting]
+    [UseFiltering]
+    public Neo4JExecutable<User> GetUsers([ScopedService] IAsyncSession session) => new (session);
 
-        // asyncrhonously get all users with UserService
-        public IEnumerable<User> GetAllUsers()
-            => _users.GetAllUsers();
-
-
-        public string GetHello()
-            => "Hello World";
-
-        // asyncrhonously get all user by email with UserService
-        public async Task<User> GetUser(string email)
-            => await _users.GetUserByEmail(email);
-
-        
-    }
-}
+    [GraphQLName("authors")]
+    [UseNeo4JDatabase(databaseName: "neo4j")]
+    [UseProjection]
+    [UseFiltering]
+    [UseSorting]
+    public Neo4JExecutable<Author> GetAuthors([ScopedService] IAsyncSession session) => new (session);
