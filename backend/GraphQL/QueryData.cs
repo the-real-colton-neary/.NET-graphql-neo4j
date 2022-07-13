@@ -21,3 +21,5 @@ public class QueryData
     [UseFiltering]
     [UseSorting]
     public Neo4JExecutable<Author> GetAuthors([ScopedService] IAsyncSession session) => new (session);
+
+}
